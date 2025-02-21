@@ -5,24 +5,16 @@ public class Main
 {
   public static void main(String[] args)
   {
-    Scanner sc = new Scanner(System.in);
-    String input = "";
-
-    while (!input.equals("STOP"))
-    {
-      System.out.println("infinite loop! replace with your code");
-    }
+    // Feel free to test code here
   }
 
-  // Problem 2 - HighestNum
-  public static Integer highestNum(ArrayList<Integer> arr)
+  public static void shiftLeft(ArrayList<String> arr)
   {
-    return null;
+    
   }
 
-  // Problem 3 - getEvens
-  public static ArrayList<Integer> getEvens(final ArrayList<Integer> arr)
+  public static printStatistics(final ArrayList<Integer> arr)
   {
-    return null;
+    
   }
 }
