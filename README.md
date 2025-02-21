@@ -1,4 +1,4 @@
-# unit-7-2-assignment
+# unit-7-3-assignment
 
 ## Git Config
 ```
@@ -23,36 +23,27 @@ After you compile the shape classes, you only need to compile and run `Main.java
 # Instructions  
 
 ## Problem 1
-Write a Java program that allows a user to input multiple words. Your program should stop accepting words when the user enters "STOP". Store the words in an `ArrayList`. The word STOP should not be stored in the list.
+Write a public static void method named `shiftLeft` which takes a single parameter of an `ArrayList` of `String` objects. The method should shift every element of the parameter `ArrayList` one position to the left, and move the first element of the list into the last position.
 
-Next, print the `ArrayList`, then print all the strings from this list in the reverse order to which they appear in the list, with each one on a new line, while adding the strings from the array in sequential order starting from the beginning.
+For example, if the parameter list passed to the method initially prints as `[dogs, monkeys, cats]`, this would become `[monkey, cats, dogs]` after the method is executed.
 
-Sample Run:
-```
-Please enter words, enter STOP to stop the loop.
-winter
-fall
-spring
-summer
-STOP
-
-[winter,fall,spring,summer]
-summerwinter
-springfall
-fallspring
-wintersummer     
-```
-
-Hint: printing the entire ArrayList needs only one statement, however to print each String from the list individually on a new line starting from the last value, you will need to write a loop which starts at the end of the list and works backwards through it.
+**Hint:** think about which built in `ArrayList` methods can cause multiple elements to shift when they are called.
 
 ## Problem 2
-Write a public static method named `highestNum` which takes an ArrayList of `Integer` objects, and returns the highest value in this list. Make sure to take into account negative numbers.
+Write a public static void method named `printStatistics` which takes a single parameter of an `ArrayList` of `Integer` objects. The method should print the `Sum`, `Average` and `Mode` of the integers in the parameter `ArrayList`. If there is more than one mode (i.e. two or more values appear equal numbers of times and no values appear more often), the method should print "no single mode".
 
-Note: when you write your method header, and specify the type of the parameter as an ArrayList, make sure you include the data type your ArrayList will contain in angle brackets (<>).
+For example, if the `ArrayList` parameter prints as `[2, 5, 7, 5]` the `printStatistics` method should produce the following output:
+```
+Sum: 19
+Average: 4.75
+Mode: 5
+```
+Alternatively if the ArrayList parameter prints as `[1, 5, 9, 5, 1]` the `printStatistics` method should produce the following output:
+```
+Sum: 21
+Average: 4.2
+Mode: no single mode
+```
 
-Hint: If you assume perfect data, then set the minimum to the first element of your `ArrayList`.  If you'd like to be super defensive about your programming, then set the minimum to `Integer.MIN_VALUE`.
-
-## Problem 3
-Write the `getEvens` method so it takes in a single `ArrayList` as parameter, and returns a new `ArrayList` of `Integers` containing all even `Integers` from the input `ArrayList` in the order they originally appeared. The contents of the input should not change.
-
-For example, if an `ArrayList` containing the `Integers` 1,2,4,5,7 in that order is passed as a parameter to `getEvens`, it should return an `ArrayList` containing the `Integers` 2,4 in that order.
+**Hint:** The way Mr. Vu would initially approach the mode portion of the problem, is to create a boolean variable, `uniqueMode`, and initialize it to false.  If a new mode is found (as in, you found a number that appears the most times), then `uniqueMode` is set to true.  If *another* mode is found (as in, you found a *different* number that appears the most number of times), then `uniqueMode` gets reset to false.
+  
